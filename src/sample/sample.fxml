@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints />
       <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
    </rowConstraints>
    <children>
-      <TextField prefHeight="138.0" prefWidth="200.0" GridPane.rowIndex="1" />
-      <TextArea prefHeight="47.0" prefWidth="233.0" text="GUI SKRIV I DIN README&#10;" />
+      <TextField fx:id="inputField" onAction="#writeReadme" prefHeight="0.0" prefWidth="233.0" text="SKRIV I README MED GUI :D" GridPane.rowIndex="1" />
+      <TextArea fx:id="guiSkriver" onInputMethodTextChanged="#writeReadme" prefHeight="181.0" prefWidth="233.0" text="&#10;" GridPane.rowIndex="2" />
+      <Button fx:id="Knap" mnemonicParsing="false" onAction="#writeReadme" text="Button" GridPane.rowIndex="3" />
    </children>
 </GridPane>
